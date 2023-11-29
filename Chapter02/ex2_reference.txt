@@ -1,0 +1,36 @@
+C++学习感悟
+作者：GuodEver
+
+引用：为对象另起名字，将声明符写为&d的形式来定义引用
+int val=10;
+int &refVal=val; 此时refVal为val的引用  类型一致
+
+指针：可以对对象的地址进行存储，并间接访问，其本身就是对象 
+int *d d为变量名
+
+1、获取对象的地址
+int ival=42;
+int *p=&ival; p存放变量的地址，需要类型完全匹配
+2、利用指针访问对象
+int val=42;
+int *p=&val;
+cout<<*p  * 为解引用
+*p此时就代表val，对*p进行赋值，就是给val进行赋值，给指针所指的对象进行赋值
+3、空指针，定义一个指针之前检查是否为空
+int *p=nullptr;
+4、void* 
+double *p=&obj;
+void *v=&obj;
+v=p;  v可以存放任意类型你的指针
+5、指针的指针
+int val=42;
+int *P=&val; 指向val
+int **pi=&p; 指向int型的指针
+6、指针的引用
+int i=42;
+int *p;
+int *&r=p;  指针类型的变量r为p的引用
+r=&i;
+*r=0;
+
+const 常量引用
